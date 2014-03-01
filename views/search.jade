@@ -1,0 +1,60 @@
+div#search-box
+	form#search
+		input(type="search", placeholder="Destination", name="searchbox")
+
+		div#filters
+			div.filter
+				img(src="../public/images/dist.png")
+				h4 Distance
+				input(type="checkbox")
+				select(id="max-blocks", name="max-blocks")
+					option(value="1") 1
+					option(value="2") 2
+					option(value="3") 3
+					option(value="4") 4
+					option(value="5") 5
+					option(value="6") 6
+					option(value="7") 7
+					option(value="8") 8
+					option(value="9") 9
+					option(value="10") 10
+				label(class="slabel" for="max-blocks") blocks
+			div.filter
+				img(src="../public/images/dollar.png")
+				h4 Price
+				input(type="checkbox")
+				select(id="max-price", name="max-price")
+					option(value="0") 0
+					option(value="1") 1
+					option(value="2") 2
+					option(value="3") 3
+					option(value="4") 4
+					option(value="5") 5
+					option(value="6") 6
+					option(value="7") 7
+					option(value="8") 8
+					option(value="9") 9
+					option(value="10") 10
+				label(class="slabel" for="max-price") price
+			div.filter
+				img(src="../public/images/clock.png")
+				h4 Time
+				input(class="bootstrap time",type="text" name="from")
+				span till
+				input(class="bootstrap time",type="text" name="to")
+
+			button(id="submit", type="submit") Search
+	div#key
+		ul
+			li
+				img(src="key1.png")
+				span key1
+			li
+				img(src="key2.png")
+				span key2
+			li
+				img(src="key3.png")
+				span key3
+			li
+				img(src="key4.png")
+				span key4

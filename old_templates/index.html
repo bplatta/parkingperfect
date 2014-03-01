@@ -1,0 +1,88 @@
+!DOCTYPE html>
+<html>
+<head>
+<title>Parking Perfect</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+<script type="text/javascript" src="js/ppevents.js"></script>
+</head>
+<body>
+	<div id="search-box">
+		<div id="mag-nav"></div>
+		<div id="search">
+			<input type="search" placeholder="Destination" id="search-input" name="searchbox">
+
+			<div id="filters">
+				<div class="filter">
+					<img src="#" alt="run!" />
+					<h4>Distance</h4>
+					<input type="checkbox">
+					<select id="max-blocks" name="max-blocks">
+						<option value="0" selected>0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					<label class="slabel" for="max-blocks">blocks</label>
+				</div>
+				<div class="filter">
+					<img src="#" alt="run!" />
+					<h4>Pricing</h4>
+					<input type="checkbox">
+					<select id="max-price" name="max-price">
+						<option value="0" selected>0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+					</select>
+					<label class="slabel" for="max-price">USD</label>
+				</div>
+				<div class="filter">
+					<img src="#" alt="run!" />
+					<h4>Time</h4>
+					<input type="text">
+					<div class="till">till</div>
+					<input id="max-blocks" value="0">
+				</div>
+
+				<button id="submit-search" type="submit">Search</button>
+			</div>
+		</div>
+		<div id="key">
+			<img src="img/one.jpg" alt="one"><span>Label</span>
+			<img src="img/one.jpg" alt="one"><span>Label</span>
+			<img src="img/one.jpg" alt="one"><span>Label</span>
+			<img src="img/one.jpg" alt="one"><span>Label</span>
+		</div>
+
+	</div>
+
+	<div id="current-view">
+		<!-- load current view -->
+	</div>
+
+<footer>
+	<nav id="navigation-menu">
+		<ul>
+			<li>map</li>
+			<li>list</li>
+			<li>set</li>
+		</ul>
+	</nav>
+</footer>
+</html>
