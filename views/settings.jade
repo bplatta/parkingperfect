@@ -4,7 +4,7 @@ block content
 		h3 User Settings
 		div#cs
 			form#input Current Spot:
-				input(type="text", name="spot")
+				input(type="text", name="spot",id="spot")
 			button(id="setSpot") Set Spot
 			button(id="clear") Clear
 		div#actions
@@ -48,13 +48,16 @@ block content
 			table(class="table table-striped", id="faveTable")
 				tr
 					td#location1 2145 Sheridan Rd
-					td button#remove1 Remove
+					td
+						button#remove1 Remove
 				tr
 					td#location2
-					td button#remove2 Remove
+					td
+						button#remove2 Remove
 				tr
 					td#location3
-					td button#remove3 Remove
+					td
+						button#remove3 Remove
 			a#addFave Add Favorite
 		div#feedback
 		div(class="modal fade", id="myModal", role="dialog", aria-hidden="true")
@@ -66,12 +69,12 @@ block content
 					div(class="modal-body")
 						form
 							fieldset
-								label(for="remindTime")Alert Time
+								label(for="remindTime") Alert Time
 								input(type="time", name="alertTime", class="text ui-widget-content ui-corner-all", id="alertTime")
 								input(type="reset" value="Reset")
 					div(class="modal-footer")
 						button(type="button", class="btn btn-primary", id="save") Save Changes
-		div(class="modal fade", id="faveModal", role="dialog", aria-hidden="true")
+		div(class="modal fade", id="faveModal", role="dialog")
 			div(class="modal-dialog")
 				div(class="modal-content")
 					div(class="modal-header")
@@ -80,7 +83,7 @@ block content
 					div(class="modal-body")
 						form
 							fieldset
-								label(for="faveAddress")New Favorite Address
+								label(for="faveAddress") New Favorite Address
 								input(type="text", name="faveAdd", class="text ui-widget-content ui-corner-all", id="faveAdd")
 								input(type="reset" value="Reset")
 					div(class="modal-footer")
