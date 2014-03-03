@@ -328,6 +328,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 	border: 1px solid #000;
 }
 
+#settings {
+	width: 415px;
+	height: 514px;
+	margin: 10px auto;
+	padding: 2px;
+	font-family: Helvetica;
+}
+
 /* #settings-page {
 	padding: 0 2em;
 }
