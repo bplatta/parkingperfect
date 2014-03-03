@@ -205,6 +205,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 
 /* user settings */
 
+#settings-page {
+	padding: 0 2em;
+}
+
 #settings-page h3 {
 	text-align: center;
 
@@ -217,7 +221,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 #help-buttons {
 	margin: 0 auto;
 	display: block;
-	width: 55%;
+	width:61%;
 }
 
 #help-buttons a {
@@ -234,14 +238,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 }
 
 #favorites ul li {
-	text-decoration: underline;
 	width: 10em;
 	float: right;
 	margin-right: 3em;
 	clear: both;
-	padding: 1em;
+	padding: 0.5em;
+	font-size: 21px;
+	border-bottom: 1px solid black;
 }
 
 #favorites ul li img {
 	float: right;
+	width: 20px;
 }
+
