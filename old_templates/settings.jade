@@ -1,0 +1,32 @@
+extends layout
+block content
+	div#settings-page
+		h3 User Settings
+		div#current-spot
+			span Current Spot:
+				input(type="text", name="current")
+			div#help-buttons
+				button(class="btn setR", type="submit", name="set-reminder") Set Reminder
+				a(class="check btn", href="#") Am I okay?
+		div#permits
+			span Permit Type: 
+			form#selectP
+				select(class="permit-types", name="permit-types")
+					option(value="none") none
+					option(value="NU-Permit-R") NU permit R
+					option(value="NU-Permit-visitor") NU visitor
+					option(value="NU-student-permit") NU student
+					option(value="Evanston-res-permit") Evanston permit
+				button(class="btn permit", type="submit" name="permit-submit" id="permit-submit") Get Permit
+		div#favorites
+			span Favorites: 
+			ul
+				each val in favorites
+					li= val
+						img(src="images/delete.png")
+				li
+					img(src="images/add.png")
+
+
+block search
+	include includes/footer-nav
