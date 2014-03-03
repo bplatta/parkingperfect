@@ -1,5 +1,10 @@
 extends layout
-include search
-	block content
-		div#map-view
-include footer-nav
+
+block search
+	include includes/search
+	
+block content
+	div#map-view.view-one
+
+block footer
+	include includes/footer-nav

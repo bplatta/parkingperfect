@@ -1,6 +1,16 @@
-extends index
-	include search
-	block content
-		div#list-view
+extends layout
 
-	include footer-nav
+block search
+	include includes/search
+block content
+	div#list-view
+		ul.list-group
+			each object in data
+				li.panel-body
+					ul
+						each val, index in object
+							li
+								span= index + ": " + val
+		
+block footer
+	include includes/footer-nav

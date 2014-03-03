@@ -1,9 +1,17 @@
-doctype html 5
+doctype html
 html
 	head
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(type='text/javascript' src='javascripts/jquery-1.11.0.min.js')
 		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-		link(rel='stylesheet', href='/stylesheets/bootstrap-responsive.min.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap-timepicker.min.css')
+		script(type='text/javascript' src='javascripts/bootstrap-timepicker.min.js')
+		script(type='text/javascript' src='javascripts/custom.js')
 	body
+		block search
+
 		block content
+
+		footer
+			block footer
