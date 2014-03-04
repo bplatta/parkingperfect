@@ -1,125 +1,50 @@
 $(document).ready(function(){ 
+    var current="";
+    var display = $('#outputInfo');
+    var favorites = $('#hiddendata span').html().split(',');
 
-    var fdbck = $("#feedback");
-    var placeholder = "";
-    var newplace = "";
-    var remindTime = "";
-    var startFdbck = "";
-    var placeFdbck = "";
-    var table=document.getElementById('faveTable');
-    var l1 = $("#location1");
-    var l2 = $("#location2");
-    var l3 = $("#location3");
-    var newLoc = "";
+    $.fn.refresh = function() {
+    return $(this.selector);
+    };
 
-    document.getElementById("setSpot").onclick = function(){
-        placeholder = document.getElementById('spot').value;
-        if (placeholder == "")
-        {
-            placeFdbck = "Please enter a value for current spot before submitting.";
-            fdbck.text(placeFdbck);
-        }
-        else
-        {
-            $('#spot').prop('placeholder',placeholder);
-            placeFdbck = placeholder + " saved as current spot.";
-            fdbck.text(placeFdbck);
-        }
-    }
-    document.getElementById("clear").onclick = function(){
-        newplace = "";
-        fdbck.text(newplace);
-        $('#spot').prop('placeholder', newplace);
-        document.getElementById('spot').value = "";
-        placeholder = "";
-    }
-
-    $("#addFave").click(function(){
-       document.getElementById("faveModal").style.visibility= "visible";
-       document.getElementById("myModal").style.visibility = "hidden";
-       fdbck.text("");
-    });
-
-    document.getElementById("saveFave").onclick = function(){
-        newLoc = document.getElementById("faveAdd").value;
-        if(newLoc != ""){
-            if(l1.text() == "")
-            {
-                l1.text(newLoc);
-                document.getElementById("faveAdd").value = "";
-                document.getElementById("faveModal").style.visibility="hidden";
-                document.getElementById("remove1").style.visibility = "visible";
-            }
-            else if(l2.text() == "")
-            {
-                l2.text(newLoc);
-                document.getElementById("faveAdd").value = "";
-                document.getElementById("faveModal").style.visibility="hidden";
-                document.getElementById("remove2").style.visibility = "visible";
-            }
-            else{
-                l3.text(newLoc);
-                document.getElementById("faveAdd").value = "";
-                document.getElementById("faveModal").style.visibility="hidden";
-                document.getElementById("addFave").style.visibility = "hidden";
-                document.getElementById("remove3").style.visibility = "visible";
-            }
-        }
-        else{
-            document.getElementById("faveModal").style.visibility="hidden";
-            fdbck.text("Please enter a value for new favorite address.");
-
-        }
-
-    }
-    document.getElementById("closeFave").onclick = function(){
-        document.getElementById("faveModal").style.visibility="hidden";
-    }
-    document.getElementById("remove1").onclick = function(){
-        l1.text("");
-        document.getElementById("remove1").style.visibility = "hidden";
-        document.getElementById("addFave").style.visibility = "visibile";
-    }
-    document.getElementById("remove2").onclick = function(){
-        l2.text("");
-        document.getElementById("remove2").style.visibility = "hidden";
-        document.getElementById("addFave").style.visibility = "visible";
-    }
-    document.getElementById("remove3").onclick = function(){
-        l3.text("");
-        document.getElementById("remove3").style.visibility = "hidden";
-        document.getElementById("addFave").style.visibility = "visible";
-    }
-    document.getElementById("save").onclick = function(){
-        remindTime = document.getElementById("alertTime").value;
-        if (remindTime == ""){
-            fdbck.text("Please select a time.");
-        }
-        else{
-            fdbck.text("Reminder set for: " + remindTime + ".");
-            document.getElementById("alertTime").value = "";
-            document.getElementById("myModal").style.visibility = "hidden";
-        }   
-    }
-    $("#reminder").click(function(){
-        document.getElementById("myModal").style.visibility = "visible";
-        document.getElementById("faveModal").style.visibility="hidden";
-        fdbck.text("");
-    });
-    document.getElementById("closeTime").onclick = function(){
-        document.getElementById("myModal").style.visibility="hidden";
-    }
-
-
-    $("#check").click(function(){
-        if (placeholder==""){
-            fdbck.text("Err: No parking spot currently saved.");
-        }
-        else
-        {
-            var check = "Yes! This spot currently allows 2-hour parking.";
-            fdbck.text(check);
+    $('.spotset').click(function(){
+        current = $('#current').val();
+        if(current!=""){
+            display.css('background-color', '#B2D3F4');
+            display.html(current + " set as current spot");
+            display.css('visibility','visible');
         }
     });
 
+    $('.check').click(function(){
+        if (current=="") {
+            display.css('background-color','#FFA6A6');
+            display.html("Please enter a spot");
+            display.css('visibility','visible');
+        } else {
+            display.css('background-color', '#B2D3F4');
+            display.html("Yes! This spot has 2-hour metered parking");
+            display.css('visibility','visible');
+        }
+    });
+
+    $('.deleteFav').click(function(){
+        var oldFav = $(this).parent().html().split('<')[0];
+        favorites.splice(favorites.indexOf(oldFav),1);
+
+        $(this).parent().remove();
+        console.log(oldFav + " removed from favorites");
+        console.log(favorites);
+    });
+
+    $('.addFav').click(function() {
+        var newItem = $('#addFav').val();
+        console.log(newItem);
+        if(newItem != "") {
+            favorites.push(newItem);
+            var addLi = '<li>' + newItem + '<img src="images/delete.png" class="deleteFav">';
+            $(this).parent().parent().prepend(addLi);
+            console.log(favorites);
+        }
+    });
 });

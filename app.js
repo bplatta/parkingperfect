@@ -6,7 +6,7 @@
 var express = require('express');
 var routes = require('./routes');
 var http = require('http');
-var path = require('path');
+var path = require('path');3
 
 var app = express();
 
@@ -30,6 +30,7 @@ app.get('/', routes.map);
 app.get('/list', routes.list);
 app.get('/settings', routes.settings);
 app.get('/map', routes.map);
+app.get('/check', routes.check);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

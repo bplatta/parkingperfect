@@ -9,7 +9,7 @@ body {
 	width: 23em;
 	height: 93%; 
 	left: -19em;
-	position: absolute;
+	position: fixed;
 	background: #5f7b91; /* Old browsers */
 background: -moz-linear-gradient(top,  #5f7b91 1%, #566876 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#5f7b91), color-stop(100%,#566876)); /* Chrome,Safari4+ */
@@ -119,7 +119,7 @@ li.filter input {
 	height: 4em;
 	bottom: 0;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	background: #5f7b91; /* Old browsers */
 background: -moz-linear-gradient(top,  #5f7b91 1%, #566876 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#5f7b91), color-stop(100%,#566876)); /* Chrome,Safari4+ */
@@ -174,9 +174,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f7b91', end
 
 
 #list-view {
-	width: 420px;
+	width: 400px;
 	height: 600px;
-	overflow: auto;
 }
 
 
@@ -201,132 +200,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 	left: 20px;
 	position: absolute;
 	width: 89%;
+	overflow: scroll;
 }
 
 /* user settings */
 
-#input {
-	display: inline-block;
-	margin-left: 60px;
-	margin-top: 60px;
-}
-#setSpot{
-	display: inline-block;
-}
-#clear{
-	display: inline-block;
-}
-#starttime {
-	margin-left:77px;
-	margin-top:20px;
-}
-#actions a{
-	border: 2px #7C7C7C solid;
-	display: block;
-	width: 100px;
-	height: 25px;
-	float: left;
-	text-decoration: none;
-	color: #EDEDED;
-	text-align: center;
-	font-size: 16px;
-	padding: 2px;
-	margin-top: 16px;
-	margin-bottom: 6px;
-	border-radius: 10px;
-	vertical-align: text-middle;
-
-}
-#reminder{
-	background: #9C2B17;
-	margin-left: 107px;
-}
-#check{
-	background: #1B51B5;
-	margin-left: 5px;
-}
-#permit {
-	height: 25px;
-	float: left;
-	text-decoration: none;
-	color: black;
-	text-align: center;
-	font-size: 16px;
-	padding: 2px;
-	margin-top: 6px;
-	margin-bottom: 6px;
-	border-radius: 10px;
-	margin-left: 62px;
-	vertical-align: text-middle;
-	/*margin-left: 54px;*/
-}
-#faves {
-	height: 45px;
-	float: left;
-	text-decoration: none;
-	color: black;
-	clear: left;
-	/*text-align: center;*/
-	font-size: 16px;
-	padding: 5px;
-	margin-top: 6px;
-	margin-bottom: 6px;
-	border-radius: 10px;
-	margin-left: 82px;
-	vertical-align: top;
-	border: 1px black;
-}
-#faveTable{
-	display: inline-block;
-	vertical-align: bottom;
-}
-#remove1{
-	margin-right: 0px;
-}
-#remove2{
-	visibility: hidden;
-	margin-right: 0px;
-}
-#remove3{
-	visibility: hidden;
-	margin-right: 5px;
-}
-#addFave{
-	font-size: 14px;
-	border-radius: 5px;
-	display: block;
-	color: black;
-	border: 1px solid;
-	text-align: center;
-	background-color: #91BF26;
-	width:200px;
-	margin-left: 32px;
-}
-#feedback {
-	clear: left;
-	margin-left:70px;
-	margin-top:50px;
-	height:25px;
-	padding: 50px;
-}
-#myModal {
-	visibility: hidden;
-	width:300px;
-	margin-right: auto;
-	margin-left: auto;
-	background color: #fff;
-	border:1px solid #000;
-	padding: 15px;
-	text-align:center;
-}
-#faveModal{
-	visibility: hidden;
-	position: fixed;
-	top:200px;
-	margin-left: 50px;
-	background-color: #EBEBEB;
-	border: 1px solid #000;
-}
+/* ben */
 
 #settings {
 	width: 415px;
@@ -336,13 +215,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 	font-family: Helvetica;
 }
 
-/* #settings-page {
+ #settings-page {
 	padding: 0 2em;
 }
 
 #settings-page h3 {
 	text-align: center;
-
+	margin-bottom: 1em;
 }
 
 #favorites ul {
@@ -360,8 +239,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 }
 
 .permit-types {
-	float: right;
 	margin-right: 2em;
+	margin: 0 auto;
+	display: block;
 }
 
 #permit-submit {
@@ -369,17 +249,67 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 }
 
 #favorites ul li {
-	width: 10em;
+	width: 100%;
 	float: right;
-	margin-right: 3em;
 	clear: both;
 	padding: 0.5em;
 	font-size: 21px;
-	border-bottom: 1px solid black;
+	border-top: 1px solid #E1E1E1;
+}
+
+#favorites {
+	margin-top: 2em;
+	float: left;
+	width: 100%;
 }
 
 #favorites ul li img {
 	float: right;
 	width: 20px;
-} */
+}
 
+#permits {
+	margin-top: 2em;
+	float: left;
+	width: 100%;
+}
+
+#favorites {
+	margin-top: 2em;
+}
+
+#favorites input {
+	width: 80%;
+	margin: 0;
+}
+
+#setSpot {
+	width: 100%;
+	display: block;
+	margin-bottom: 1.5em;
+}
+
+button.spotset {
+	float: right;
+}
+
+#favorites li:nth-child(odd) {
+	background-color: #EFEFEF;
+}
+
+#favorites li:nth-child(even) {
+	background-color: #FAFAFA;
+}
+
+#hiddendata {
+	visibility: hidden;
+}
+
+#outputInfo {
+	margin: 0.5em 0;
+	visibility: hidden;
+	color: white;
+	border-radius: 3px;
+	width: 100%;
+	text-align:center; 
+}
