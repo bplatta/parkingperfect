@@ -34,6 +34,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f7b91', end
 #main-search {
 	margin: 1.5em auto;
 	display: block;
+	width: 60%;
 }
 
 .search-main ul {
@@ -279,30 +280,28 @@ button.spotset {
 /* RESPONSIVE LAYOUT DESIGN */
 
 /* smartphones */
-@media only screen 
-and (min-device-width: 320px)
-and (max-device-width: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 .view-one {width: 340px; height: 500px;}
+.sel {margin-bottom: 0;}
+.ssel select {margin-left: 3em;}
+#timepicker2 {margin: 5px 0 1em;}
+#timepicker1 {margin-bottom: 5px;}
 
 }
+
 /* smartphones landscape */
-@media only screen 
-and (min-width: 321px) {
+@media only screen and (min-width: 321px) {
 	
 }
 /* smartphones portrait */
-@media only screen 
-and (max-width: 430px) {
+@media only screen and (max-width: 430px) {
 	
 }
 /* ipads portrait and landscape */
-@media only screen 
-and (min-device-width: 768)
-and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 768) and (max-device-width: 1024px) {
 
 }
-/* desktops and laptops 
-@media only screen 
-and (min-width: 1200px) {
+/* desktops and laptops */
+@media only screen and (min-width: 1200px) {
 
 }
