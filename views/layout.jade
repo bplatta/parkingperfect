@@ -1,18 +1,12 @@
 doctype html
 html
 	head
+		meta( charset='utf-8')
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		script(type='text/javascript' src='javascripts/jquery-1.11.0.min.js')
 		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
 		link(rel='stylesheet', href='/stylesheets/bootstrap-timepicker.min.css')
-		script(type='text/javascript', src='javascripts/bootstrap-timepicker.min.js')
-		script(type='text/javascript', src='javascripts/jquery-ui-1.10.4.custom.min.js')
-		script(type='text/javascript', src='javascripts/search.js')
-		if view=="map"
-			script(type='text/javascript', src='javascripts/map.js')
-		if view=="settings"
-			script(type='text/javascript', src='javascripts/settings.js')
 	body
 		block search
 
@@ -20,3 +14,11 @@ html
 
 		footer
 			block footer
+
+		script(type='text/javascript', src='javascripts/bootstrap-timepicker.min.js')
+		script(type='text/javascript', src='javascripts/jquery-ui-1.10.4.custom.min.js')
+		script(type='text/javascript', src='javascripts/search.js')
+		if view=="map"
+			script(type='text/javascript', src='javascripts/map.js')
+		if view=="settings"
+			script(type='text/javascript', src='javascripts/settings.js')

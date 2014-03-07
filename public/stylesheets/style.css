@@ -6,7 +6,7 @@ body {
 /* search box */
 
 #search-box {
-	width: 23em;
+	width: 78%;
 	height: 93%; 
 	left: -19em;
 	position: fixed;
@@ -162,7 +162,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f7b91', end
 	background-repeat: no-repeat;
 	background-color: white;
 	width: 420px;
-	height: 600px;
+	height: 42em;
 	margin: 0;
 }
 
@@ -207,18 +207,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 
 /* ben */
 
-#settings {
-	width: 415px;
-	height: 514px;
-	margin: 10px auto;
-	padding: 2px;
-	font-family: Helvetica;
-}
-
- #settings-page {
-	padding: 0 2em;
-}
-
 #settings-page h3 {
 	text-align: center;
 	margin-bottom: 1em;
@@ -234,9 +222,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 	width:61%;
 }
 
-#help-buttons a {
-	margin-left: 15px;
-}
+
 
 .permit-types {
 	margin-right: 2em;
@@ -312,4 +298,36 @@ button.spotset {
 	border-radius: 3px;
 	width: 100%;
 	text-align:center; 
+}
+
+/* RESPONSIVE LAYOUT DESIGN */
+
+/* smartphones */
+@media only screen 
+and (min-device-width: 320px)
+and (max-device-width: 480px) {
+#footer {height: 10em;}
+.view-one{width: 320px;}
+
+}
+/* smartphones landscape */
+@media only screen 
+and (min-width: 321px) {
+	
+}
+/* smartphones portrait */
+@media only screen 
+and (max-width: 430px) {
+	
+}
+/* ipads portrait and landscape */
+@media only screen 
+and (min-device-width: 768)
+and (max-device-width: 1024px) {
+
+}
+/* desktops and laptops 
+@media only screen 
+and (min-width: 1200px) {
+
 }

@@ -1,6 +1,6 @@
 extends layout
 block content
-	div#settings-page
+	div#settings-page.container-fluid
 		h3 User Settings
 		div#current-spot
 			div#setSpot
@@ -8,9 +8,9 @@ block content
 					input(type="text", name="current" id="current")
 					button(class="spotset btn", type="submit",name="setSpot") set
 			div#outputInfo
-			div#help-buttons
-				button(class="btn setR", type="submit", name="set-reminder") Set Reminder
-				a(class="check btn", href="#") Am I okay?
+			div#help-buttons.btn-group
+				button(class="btn btn-default", type="button", name="set-reminder") Set Reminder
+				button(class="btn btn-default check", type="button", name="check") Am I okay?
 		div#permits
 			span Permit Type: 
 			form#selectP
@@ -29,9 +29,10 @@ block content
 				li
 					input(id="addFav",type="text",name="newfav")
 					img(src="images/add.png" class="addFav")
+			button(class="btn save", type="button", name="save") Save
 		div#hiddendata
 			span #{favorites}
 
 
-block search
+block footer
 	include includes/footer-nav
