@@ -281,7 +281,7 @@ button.spotset {
 
 /* smartphones */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-.view-one {width: 340px; height: 500px;}
+.view-one {width: 360px; height: 500px;}
 .sel {margin-bottom: 0;}
 .ssel select {margin-left: 3em;}
 #timepicker2 {margin: 5px 0 1em;}
