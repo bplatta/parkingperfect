@@ -1,10 +1,10 @@
 $(document).ready(function(){
 
     /* MAP SCROLL */
-
+    /* -1043 -888 */
 	var $bg = $('.view-one'),
-        origin = {x: -1043, y: -888},
-        start = {x: -1043, y: -888},
+        origin = {x: 0, y: 0},
+        start = {x: 0, y: 0},
         movecontinue = false;
     
     function move (e){
@@ -52,7 +52,7 @@ $(document).ready(function(){
     $bg.bind('mousedown mouseup mouseleave', handle);
     $bg.bind('dblclick', reset);
 
-    $('.searchbut').click(function(){
+    $('#searchb').click(function(){
 		$bg.toggleClass("two");
 	});
 
