@@ -191,6 +191,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 
 #favorites ul {
 	list-style-type: none;
+	margin: 0;
 }
 
 #help-buttons {
@@ -213,7 +214,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 
 #favorites ul li {
 	width: 100%;
-	float: right;
+	float: left;
 	clear: both;
 	padding: 0.5em;
 	font-size: 21px;
@@ -277,9 +278,10 @@ button.spotset {
 	text-align:center; 
 }
 
-.save {
+#save {
 	margin: 1em auto;
 	display: block;
+	width: 50%;	
 }
 
 /* RESPONSIVE LAYOUT DESIGN */
@@ -294,11 +296,12 @@ button.spotset {
 #key img {width: 12px;}
 #key li {line-height: 17px;}
 #favorites {margin-top: 0;}
-.save {margin-top: 0.5em;}
+#save {margin-top: 0.5em;}
 #permits {margin-top: 0.5em;}
-#current {width: 55%;}
+#current {width: 50%;}
 #setSpot {margin-bottom: 0.5em;}
 #outputInfo {margin-bottom: 0.5em;}
+#favorites li {padding: 0.3em;}
 
 
 }
