@@ -277,6 +277,11 @@ button.spotset {
 	text-align:center; 
 }
 
+.save {
+	margin: 1em auto;
+	display: block;
+}
+
 /* RESPONSIVE LAYOUT DESIGN */
 
 /* smartphones */
@@ -288,6 +293,13 @@ button.spotset {
 #timepicker1 {margin-bottom: 5px;}
 #key img {width: 12px;}
 #key li {line-height: 17px;}
+#favorites {margin-top: 0;}
+.save {margin-top: 0.5em;}
+#permits {margin-top: 0.5em;}
+#current {width: 55%;}
+#setSpot {margin-bottom: 0.5em;}
+#outputInfo {margin-bottom: 0.5em;}
+
 
 }
 
