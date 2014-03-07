@@ -8,7 +8,7 @@ div#search-box
 
 			div#filters
 				ul
-					li.filter
+					li.filter.sel
 						img(src="images/dist.png")
 						input(class="chbox", type="checkbox", checked="checked")
 						div.ssel
@@ -24,7 +24,7 @@ div#search-box
 								option(value="9") 9
 								option(value="10") 10
 							label(class="slabel" for="max-blocks") blocks
-					li.filter
+					li.filter.sel
 						img(src="images/doll.png" id="dollimg")
 						input(class="chbox", type="checkbox", checked="checked")
 						div.ssel
@@ -51,7 +51,7 @@ div#search-box
 							li
 								input(id="timepicker2" class="input-small",type="text" name="to")
 
-				button(class="searchbut btn", id="submit", type="button") Search
+				button( type="button", id="searchb", class="btn") Search
 		div#key
 			ul
 				li
@@ -63,7 +63,6 @@ div#search-box
 				li
 					img(src="images/key/key-purple.png")
 					span NU permit
-			ul
 				li
 					img(src="images/key/key-red.png")
 					span No parking

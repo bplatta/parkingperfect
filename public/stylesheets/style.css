@@ -5,6 +5,12 @@ body {
 
 /* search box */
 
+.search-visible {
+	height: 100%;
+	width: 4em;
+	float: right;
+}
+
 #search-box {
 	width: 78%;
 	height: 93%; 
@@ -25,93 +31,68 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f7b91', end
 	float: right;
 }
 
-#search {
-	padding-top: 1em;
-	color: white;
-	height: 70%;
-}
-
-#filters {
-	margin-top: 4.5em;
-	padding:0 1em 0 1em; 
-}
-
 #main-search {
+	margin: 1.5em auto;
 	display: block;
-	margin: 0 auto;
 }
 
-#key {
+.search-main ul {
+	list-style-type: none;
+	margin-left: 1.5em;
 	color: white;
 }
 
-#key ul {
-	list-style-type: none;
+.sel {
+	clear: left;
+	height: 3em;
+	margin-bottom: 1em;
+}
+
+.filter img, .filter label, .filter input {
 	float: left;
-	margin-left: 1em;
-}
-
-#key li {
-	margin: 1em 0;
-}
-
-#key li img {
-	padding-right: 0.5em;
-}
-
-/* filters */
-
-#filters ul {
-	list-style-type: none;
-	margin: 1em;
-}
-
-.filter-drop {
-	width: 4em;
-	float: left;
-}
-
-.filter {
-	clear: both;
-	float: left;
-	margin-bottom: 2em;
 }
 
 .filter img {
-	float: left;
+	margin-right: 12px;
 }
 
-li.filter input {
+.ssel select {
+	width: 4em;
 	float: left;
-	margin: 0.7em 0 0 2em;
+	margin-left: 5em;
 }
 
-.filter label {
-	float: left;
-	padding: 0.4em;
-}
-
-.ssel {
-	float: left;
-	width: 8em;
-	margin-left: 3em;
-}
-
-#dollimg {
-	padding-left: 9px;
+.slabel {
+	margin:	5px 0 0 10px;
 }
 
 #timefilter {
-	font-size: 20px;
 	float: left;
+	margin-top: 5px;
 }
 
-#submit {
-	margin: 0 auto;
+.last {
+	clear: left;
+	margin-bottom: 10px;
+}
+#timepicker2 {
+	margin: 10px 0 2em;
+}
+
+#searchb {
 	display: block;
-	width: 12em;
+	margin: 0 auto;
+	width: 55%
 }
 
+#key li {
+	line-height: 25px;
+	padding: 5px 0 0 10px;
+}
+
+#key img {
+	padding-right: 10px;
+}
 
 /* footer */
 
@@ -172,11 +153,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f7b91', end
 
 /* list page */
 
-
-#list-view {
-	width: 400px;
-	height: 600px;
-}
 
 
 #list-view ul {
@@ -306,7 +282,7 @@ button.spotset {
 @media only screen 
 and (min-device-width: 320px)
 and (max-device-width: 480px) {
-.view-one{width: 340px; height: 500px;}
+.view-one {width: 340px; height: 500px;}
 
 }
 /* smartphones landscape */
