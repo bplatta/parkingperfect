@@ -8,7 +8,7 @@ body {
 #search-box {
 	width: 78%;
 	height: 93%; 
-	left: -19em;
+	left: -64%;
 	position: fixed;
 	background: #5f7b91; /* Old browsers */
 background: -moz-linear-gradient(top,  #5f7b91 1%, #566876 100%); /* FF3.6+ */
@@ -306,7 +306,7 @@ button.spotset {
 @media only screen 
 and (min-device-width: 320px)
 and (max-device-width: 480px) {
-.view-one{width: 320px;}
+.view-one{width: 340px; height: 500px;}
 
 }
 /* smartphones landscape */
