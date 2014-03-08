@@ -314,6 +314,45 @@ button.spotset {
 @media only screen and (max-width: 430px) {
 	
 }
+
+/* iphone4 portrait */
+@media (device-height : 480px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
+.search-main {font-size: 12px}	
+.view-one {width: 320px; height: 480px;}
+.sel {margin-bottom: 0; height: 2em;}
+.ssel select {margin-left: 3em;}
+#timepicker2 {margin: 5px 0 1em;}
+#timepicker1 {margin-bottom: 5px;}
+#key img {width: 12px;}
+#key li {line-height: 17px;}
+#favorites {margin-top: 0;}
+#save {margin-top: 0.5em;}
+#permits {margin-top: 0.5em;}
+#current {width: 50%;}
+#setSpot {margin-bottom: 0.5em;}
+#outputInfo {margin-bottom: 0.5em;}
+#favorites li {padding: 0.3em;}
+}
+
+/* iphone5 portrait */
+@media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
+.view-one {width: 320px; height: 568px;}
+.search-main {font-size: 12px}	
+.sel {margin-bottom: 0; height: 2em}
+.ssel select {margin-left: 1em; margin-bottom: 0;}
+#timepicker2 {margin: 5px 0 0.5em;}
+#timepicker1 {margin-bottom: 5px;}
+#key img {width: 12px;}
+#key li {line-height: 15px;}
+#favorites {margin-top: 0;}
+#save {margin-top: 0.5em;}
+#permits {margin-top: 0.5em;}
+#current {width: 50%;}
+#setSpot {margin-bottom: 0.5em;}
+#outputInfo {margin-bottom: 0.5em;}
+#favorites li {padding: 0.3em;}
+}
+
 /* ipads portrait and landscape */
 @media only screen and (min-device-width: 768) and (max-device-width: 1024px) {
 
