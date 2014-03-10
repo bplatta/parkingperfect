@@ -213,7 +213,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 }
 
 #favorites ul li {
-	width: 100%;
+	width: 93%;
 	float: left;
 	clear: both;
 	padding: 0.5em;
@@ -328,10 +328,12 @@ button.spotset {
 #favorites {margin-top: 0;}
 #save {margin-top: 0.5em;}
 #permits {margin-top: 0.5em;}
-#current {width: 50%;}
+#current {width: 40%;}
 #setSpot {margin-bottom: 0.5em;}
 #outputInfo {margin-bottom: 0.5em;}
-#favorites li {padding: 0.3em;}
+#favorites li {padding: 0.3em; width: 93%;}
+#selectP {margin-bottom: 10px;}
+#settings-page h3 {margin-bottom: 0.5em;}
 }
 
 /* iphone5 portrait */
@@ -347,10 +349,12 @@ button.spotset {
 #favorites {margin-top: 0;}
 #save {margin-top: 0.5em;}
 #permits {margin-top: 0.5em;}
-#current {width: 50%;}
+#current {width: 40%;}
 #setSpot {margin-bottom: 0.5em;}
 #outputInfo {margin-bottom: 0.5em;}
-#favorites li {padding: 0.3em;}
+#favorites li {padding: 0.3em; width: 93%;}
+#selectP {margin-bottom: 10px;}
+#settings-page h3 {margin-bottom: 0.5em;}
 }
 
 /* ipads portrait and landscape */

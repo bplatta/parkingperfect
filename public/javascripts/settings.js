@@ -25,6 +25,12 @@ $(document).ready(function(){
         }
     });
 
+    $('#save').click(function(){
+        display.css('background-color', '#B2D3F4');
+        display.html("Favorites saved");
+        display.css('visibility','visible');
+    });
+
     $('.deleteFav').bind("click", function(){
         var oldFav = $(this).parent().html().split('<')[0];
         favorites.splice(favorites.indexOf(oldFav),1);
