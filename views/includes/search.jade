@@ -4,56 +4,62 @@ div#search-box
 
 	div.search-main
 		form#search
-			input(id="main-search", type="text", placeholder="Destination", name="searchbox")
+			input(id="main-search", type="text", placeholder="Destination", name="searchbox", class="controls")
 
 			div#filters
 				ul
-					li.filter.sel
-						img(src="images/dist.png")
-						input(class="chbox", type="checkbox", checked="checked")
-						div.ssel
-							select(class="filter-drop", id="max-blocks", name="max-blocks")
-								option(value="1") 1
-								option(value="2") 2
-								option(value="3") 3
-								option(value="4") 4
-								option(value="5") 5
-								option(value="6") 6
-								option(value="7") 7
-								option(value="8") 8
-								option(value="9") 9
-								option(value="10") 10
-							label(class="slabel" for="max-blocks") blocks
-					li.filter.sel
-						img(src="images/doll.png" id="dollimg")
-						input(class="chbox", type="checkbox", checked="checked")
-						div.ssel
-							select(class="filter-drop", id="max-price", name="max-price")
-								option(value="0") 0
-								option(value="1") 1
-								option(value="2") 2
-								option(value="3") 3
-								option(value="4") 4
-								option(value="5") 5
-								option(value="6") 6
-								option(value="7") 7
-								option(value="8") 8
-								option(value="9") 9
-								option(value="10") 10
-							label(class="slabel" for="max-price") price
-					li.filter.last
+					li.filter.first
 						img(src="images/clock.png")
 						ul#timefilter
 							li
 								input(id="timepicker1" class="input-small",type="text" name="from")
-							li
-								span till
+							li#till
+								p till
 							li
 								input(id="timepicker2" class="input-small",type="text" name="to")
+					li.filters
+						ul
+							li.ftitle
+								p Filters
+							li.filter.sel
+								img(src="images/dist.png")
+								input(class="chbox", type="checkbox", checked="checked")
+								div.ssel
+									select(class="filter-drop", id="max-blocks", name="max-blocks")
+										option(value="1") 1
+										option(value="2") 2
+										option(value="3") 3
+										option(value="4") 4
+										option(value="5") 5
+										option(value="6") 6
+										option(value="7") 7
+										option(value="8") 8
+										option(value="9") 9
+										option(value="10") 10
+									label(class="slabel" for="max-blocks") blocks
+							li.filter.sel
+								img(src="images/doll.png" id="dollimg")
+								input(class="chbox", type="checkbox", checked="checked")
+								div.ssel
+									select(class="filter-drop", id="max-price", name="max-price")
+										option(value="0") 0
+										option(value="1") 1
+										option(value="2") 2
+										option(value="3") 3
+										option(value="4") 4
+										option(value="5") 5
+										option(value="6") 6
+										option(value="7") 7
+										option(value="8") 8
+										option(value="9") 9
+										option(value="10") 10
+									label(class="slabel" for="max-price") price
 
 				button( type="button", id="searchb", class="btn") Search
 		div#key
 			ul
+				li#keytitle
+					p Key
 				li
 					img(src="images/key/key-green.png")
 					span Free Parking

@@ -1,59 +1,29 @@
-$(document).ready(function(){
+var styles = [];
+var markers = [];
 
-    /* MAP SCROLL */
-    /* -1043 -888 */
-	var $bg = $('.view-one'),
-        origin = {x: 0, y: 0},
-        start = {x: 0, y: 0},
-        movecontinue = false;
-    
-    function move (e){
-        var moveby = {
-            x: origin.x - e.clientX, 
-            y: origin.y - e.clientY
-        };
-        
-        if (movecontinue === true) {
-            start.x = start.x - moveby.x;
-            start.y = start.y - moveby.y;
-            
-            $(this).css('background-position', start.x + 'px ' + start.y + 'px');
-        }
-        
-        origin.x = e.clientX;
-        origin.y = e.clientY;
-        
-        e.stopPropagation();
-        return false;
-    }
-    
-    function handle (e){
-        movecontinue = false;
-        $bg.unbind('mousemove', move);
-        
-        if (e.type == 'mousedown') {
-            origin.x = e.clientX;
-            origin.y = e.clientY;
-            movecontinue = true;
-            $bg.bind('mousemove', move);
-        } else {
-            $(document.body).focus();
-        }
-        
-        e.stopPropagation();
-        return false;
-    }
-    
-    function reset (){
-        start = {x: -1043, y: -888};
-        $(this).css('backgroundPosition', '-1043 -888');
-    }
-    
-    $bg.bind('mousedown mouseup mouseleave', handle);
-    $bg.bind('dblclick', reset);
+window.onload = function() {
+    var mapOptions = {
+        center: new google.maps.LatLng(42.050008, -87.681903),
+        zoom: 16,
+        panControl: false
+    };
+
+    var map = new google.maps.Map(document.getElementById("map-view"), mapOptions);
 
     $('#searchb').click(function(){
-		$bg.toggleClass("two");
-	});
+        styles = [{
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [
+                { "visibility": "on" },
+                { "color": "#00ff00" },
+                { "weight": 0.6 }
+            ]
+        }];
 
-});
+        map.setOptions({styles: styles});
+        console.log(styles[0]);
+
+    });
+
+}
