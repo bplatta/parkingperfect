@@ -121,8 +121,6 @@ $(document).ready(function(){
             favorites.push(newItem);
             var addLi = '<li>' + newItem + '<img src="images/delete.png" id="deleteFav-' + count + '"' + '></li>';
             $(this).parent().parent().prepend(addLi);
-            console.log(favorites);
-            console.log(addLi);
 
             var newEl = "#deleteFav-" + count;
             $(newEl).bind("click", function(){
