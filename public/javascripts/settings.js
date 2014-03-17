@@ -33,6 +33,7 @@ $(document).ready(function(){
     });
 
     $('.remind').click(function(){
+        display.hide();
         modal.show();
         rmodal.show();
     });
