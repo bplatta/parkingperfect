@@ -2,7 +2,15 @@ $(document).ready(function(){
 
 	var win_width = $(window).width();
 	var offset_search;
-	var hiddendata = $('.hiddendata span').html();
+	var view = $('.hiddendata.view span').html();
+    $(function(){
+    	var favorites = $('.hiddendata.favs span').html().split(',');
+    
+    	$('#main-search').autocomplete({
+    		source: favorites
+    	});
+
+    });
 
 	function slideSearch() {
 		if($('.search-visible').parent().hasClass("opened")) {
@@ -25,10 +33,11 @@ $(document).ready(function(){
 		slideSearch();
 	});
 
-	console.log(hiddendata);
+	console.log(view);
 
-	if (hiddendata == "list") {
+	if (view == "list") {
 		console.log('success');
 		slideSearch();
 	}
+
 });

@@ -5,11 +5,27 @@ block content
 		div#current-spot
 			div#setSpot
 				span Current: 
-					input(type="text", name="current" id="current")
+					input(type="text", name="current" id="current" placeholder="#{user.current}")
 					button(class="spotset btn", type="submit",name="setSpot") set
-			div#outputInfo
+			div.overlay
+				div#outputInfo
+					div#setMessage
+					button.btn.closeO Close
+				div#rform
+						div#header
+							h5 Set Reminder
+						div#st
+							form#input 
+								Alert Time:
+								input(id="rtime" class="input-small",type="text" name="from")
+							div.onoffswitch
+								input(class="onoffswitch-checkbox", id="myonoffswitch", name="onoffswitch", type="checkbox", checked)
+								label(class="onoffswitch-label", for="myonoffswitch")
+									div.onoffswitch-inner
+									div.onoffswitch-switch
+
 			div#help-buttons.btn-group
-				button(class="btn btn-default", type="button", name="set-reminder") Set Reminder
+				button(class="btn btn-default remind", type="button", name="set-reminder") Set Reminder
 				button(class="btn btn-default check", type="button", name="check") Am I okay?
 		div#permits
 			span Permit Type: 
@@ -29,8 +45,10 @@ block content
 				li
 					input(id="addFav",type="text",name="newfav")
 					img(src="images/add.png" class="addFav")
-		div.hiddendata
+		div.hiddendata.settings
 			span #{favorites}
+		div.hiddendata.user
+			span #{user.current}
 
 
 block footer

@@ -42,9 +42,9 @@ var data = {"results":[{
 	}],
 	"user": { 
 		"name": "Abe Lincoln",
-		"current": "Log Cabin",
+		"current": "812 Clark, Evanston",
 		"reminder": null,
-		"favorites": ["One place", "another Place"]
+		"favorites": ["Norris center", "SPAC"]
 	}
 };
 

@@ -1,15 +1,51 @@
-$(document).ready(function(){ 
-    var current="";
+$(document).ready(function(){
     var count = 0;
-    var display = $('#outputInfo');
-    var favorites = $('.hiddendata span').html().split(',');
+    var displayMessage = $('#setMessage');
+    var display = displayMessage.parent();
+    var modal = display.parent();
+    var rmodal = $('#rform');
+    var favorites = $('.hiddendata.settings span').html().split(',');
+    var current = $('.hiddendata.user span').html();
+    console.log(current);
+
+    $('#rtime').timepicker();
+
+    // modal
+
+    $('.closeO').click(function(){
+        display.hide();
+        rmodal.hide();
+        $('.overlay').hide();
+    });
+
+   modal.click(function(){
+        display.hide();
+        rmodal.hide();
+        $('.overlay').hide();
+    });
+
+    display.click(function(){
+        return false;
+    });
+
+    rmodal.click(function(){
+        return false;
+    });
+
+    $('.remind').click(function(){
+        modal.show();
+        rmodal.show();
+    });
+
 
     $('.spotset').click(function(){
-        current = $('#current').val();
-        if(current!=""){
+        ncurrent = $('#current').val();
+        rmodal.hide();
+        if(ncurrent!=""){
+            displayMessage.html(current + " added as current spot");
             display.css('background-color', '#B2D3F4');
-            display.html(current + " set as current spot");
-            display.css('visibility','visible');
+            display.show();
+            modal.show();
 
             data = {};
             data.current = current;
@@ -27,21 +63,18 @@ $(document).ready(function(){
     });
 
     $('.check').click(function(){
+        rmodal.hide();
         if (current=="") {
             display.css('background-color','#FFA6A6');
-            display.html("Please enter a spot");
-            display.css('visibility','visible');
+            displayMessage.html("Please enter a spot");
+            display.show();
+            modal.show();
         } else {
             display.css('background-color', '#B2D3F4');
-            display.html("Yes! This spot has 2-hour metered parking");
-            display.css('visibility','visible');
+            displayMessage.html("Yes! This spot has 2-hour metered parking");
+            display.show();
+            modal.show();
         }
-    });
-
-    $('#save').click(function(){
-        display.css('background-color', '#B2D3F4');
-        display.html("Favorites saved");
-        display.css('visibility','visible');
     });
 
     $('.deleteFav').bind("click", function(){
