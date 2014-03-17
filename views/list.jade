@@ -8,10 +8,40 @@ block content
 		ul.list-group
 			each object in data
 				li.panel-body
-					ul
+					ul.cookData
 						each val, index in object
-							li
-								span= index + ": " + val
+							if index == "where"
+								li.where
+									-var image = "images/" + val[1] + ".png"
+									img(src=image, alt="#{val[1]}")
+									p= index + ": " + val[0]
+							if index == "direction"
+								if val == "north"
+									img(src="images/north.png", alt="north")
+								if val == "east"
+									img(src="images/east.png", alt="east")
+								if val == "west"
+									img(src="images/west.png", alt="west")
+								if val == "south"
+									img(src="images/south.png", alt="south")
+							if index == "distance"
+								li.dist
+									img(src="images/dist-sm.png")
+									p= index + ": " + val
+							if index == "permit"
+								li.permit
+									img(src="images/pen-sm.png")
+									p= index + ": " + val
+							if index == "when"
+								li.when
+									img(src="images/clock-sm.png")
+									p= index + ": " + val
+							if index == "price"
+								li.price
+									img(src="images/doll-sm.png")
+									p= index + ": " + val
+
+
 	div.hiddendata.view
 		span #{view}
 		

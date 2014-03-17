@@ -183,6 +183,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585871', end
 /* list page */
 
 
+.cookData li {
+	clear: left;
+	height: 1.5em;
+}
+
+.cookData img {
+	float: left;
+	margin-right: 10px;
+}
+
+.price img {
+	margin-right: 18px;
+}
+
+.cookData p {
+	margin: 0;
+	float: left; 
+}
 
 #list-view ul {
 	list-style-type: none;
@@ -437,6 +455,7 @@ li.panel-body:nth-child(odd) {
 	.filter img {margin-right: 9px;}
 	#footer {overflow: hidden; height: 3.5em;}
 	.spotset {margin-left: 2px;}
+	#footer li {padding-top: 0.8em;}
 
 }
 
