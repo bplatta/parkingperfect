@@ -427,6 +427,7 @@ button.spotset {
 	#key li {line-height: 1.4em;}
 	#key img {width: 1em;}
 	#search {margin: 0}
+	#timepicker1, #timepicker2 {width: 3.8em;}
 	#keytitle { width: 13em;}
 	.list-group {width: 30em;}
 	#current {width: %30;}
@@ -436,7 +437,7 @@ button.spotset {
 	#favorites ul li {font-size: 15px; padding: 0.2em;}
 	#favorites input {height: 1em;}
 	#outputInfo {margin: 50% auto;}
-
+	.filter img {margin-right: 9px;}
 
 }
 
