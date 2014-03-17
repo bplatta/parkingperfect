@@ -135,6 +135,9 @@ $(document).ready(function(){
         }
     });
 
+    
+    var initialScreenSize = window.innerHeight;
+
     window.addEventListener("resize", function() {
         if (window.innerHeight < initialScreenSize) {
             $('#footer').hide();
@@ -142,5 +145,5 @@ $(document).ready(function(){
             $('#footer').show();
         }
     });
-    
+
 });

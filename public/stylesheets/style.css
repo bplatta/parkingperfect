@@ -426,7 +426,7 @@ li.panel-body:nth-child(odd) {
 	#timepicker1, #timepicker2 {width: 3.8em;}
 	#keytitle { width: 13em;}
 	.list-group {width: 30em;}
-	#current {width:13em;}
+	#current {width:13em; margin: 4%;}
 	#permits {margin-top: 1.2em;}
 	#selectP {margin: 0;}
 	#favorites {margin-top: 1.2em;}
