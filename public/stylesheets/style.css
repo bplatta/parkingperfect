@@ -435,6 +435,7 @@ button.spotset {
 	#favorites {margin-top: 1.2em;}
 	#favorites ul li {font-size: 15px; padding: 0.2em;}
 	#favorites input {height: 1em;}
+	#outputInfo {margin: 50% auto;}
 
 
 }
