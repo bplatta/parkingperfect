@@ -1,4 +1,4 @@
-module.exports = {"results":[{
+var data = {"results":[{
 		"where": "North of Sherman and Clark",
 		"distance": "6",
 		"permit": "None",
@@ -46,4 +46,24 @@ module.exports = {"results":[{
 		"reminder": null,
 		"favorites": ["One place", "another Place"]
 	}
-}
+};
+
+exports.getUser = function() {
+	return data.user;
+};
+
+exports.getResults = function() {
+	return data.results;
+};
+
+exports.changeCurrent = function(current) {
+	data.user.current = current;
+};
+
+exports.delFav = function(favorite) {
+	data.user.favorites.splice(data.user.favorites.indexOf(favorite),1);
+};
+
+exports.addFav = function(favorite) {
+	data.user.favorites.push(favorite);
+};

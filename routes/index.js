@@ -1,8 +1,8 @@
 
 var data = require('../data');
 
-var dataSpots = data.results; // array of json objects
-var fakeUser = data.user; // single json object
+var dataSpots = data.getResults(); // array of json objects
+var fakeUser = data.getUser(); // single json object
 
 exports.list = function(req, res){
 	res.render('list', { view: "list", title: 'Parking Perfect: List', data: dataSpots, favorites: fakeUser.favorites} );
@@ -18,4 +18,22 @@ exports.map = function(req, res){
 
 exports.check = function(req, res){
 	res.render('settings-mia', { title: 'Parking Perfect'});
+};
+
+exports.addFav = function(req, res) {
+	var newF = req.body.favorite;
+	console.log(newF);
+	data.addFav(newF);
+};
+
+exports.delFav = function(req, res) {
+	var oldF = req.body.favorite;
+	console.log(oldF);
+	data.delFav(oldF);
+};
+
+exports.updateSpot = function(req, res) {
+var newC = req.body.current;
+	console.log(newC);
+	data.changeCurrent(newC);
 };

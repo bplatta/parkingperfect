@@ -19,10 +19,6 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.cookieParser('s3cre7'));
-app.use(express.session({
-	location: null
-}));
 app.use(app.router);
 
 // development only
@@ -35,6 +31,11 @@ app.get('/list', routes.list);
 app.get('/settings', routes.settings);
 app.get('/map', routes.map);
 app.get('/check', routes.check);
+
+app.post('/settings/add', routes.addFav);
+app.post('/settings/del', routes.delFav);
+app.post('/settings/updateSpot', routes.updateSpot);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

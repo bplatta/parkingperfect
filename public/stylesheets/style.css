@@ -187,15 +187,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585871', end
 
 li.panel-body {
 	padding: 5px 0 5px 0;
-	background: rgb(255,255,255); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
 
+li.panel-body:nth-child(even) {
+	background-color: #FAFAFA;
+}
+
+li.panel-body:nth-child(odd) {
+	background-color: #EFEFEF;
 }
 
 .list-group {
@@ -208,15 +207,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 #fakelist {
 	width: 97%;
-}
-
-#fakelist li {
-	height: 5em;
+	background:#EFEFEF;
 }
 
 /* user settings */
 
 /* ben */
+
+#current {
+	margin-left: 3%;
+}
 
 #settings-page h3 {
 	text-align: center;
@@ -310,12 +310,6 @@ button.spotset {
 	border-radius: 3px;
 	width: 100%;
 	text-align:center; 
-}
-
-#save {
-	margin: 1em auto;
-	display: block;
-	width: 50%;	
 }
 
 /* RESPONSIVE LAYOUT DESIGN */

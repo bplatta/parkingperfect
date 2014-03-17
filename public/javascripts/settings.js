@@ -10,6 +10,19 @@ $(document).ready(function(){
             display.css('background-color', '#B2D3F4');
             display.html(current + " set as current spot");
             display.css('visibility','visible');
+
+            data = {};
+            data.current = current;
+
+            $.ajax({
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json',
+            url: 'http://localhost:3000/settings/updateSpot',
+            success: function(newItem) {
+                console.log('Success: ' + current + ' set to current');
+            } 
+        });
         }
     });
 
@@ -35,6 +48,19 @@ $(document).ready(function(){
         var oldFav = $(this).parent().html().split('<')[0];
         favorites.splice(favorites.indexOf(oldFav),1);
 
+        data = {};
+        data.favorite = oldFav;
+
+        $.ajax({
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json',
+            url: 'http://localhost:3000/settings/del',
+            success: function(newItem) {
+                console.log('Success: ' + newItem + ' deleted from favorites');
+            } 
+        });
+
         $(this).parent().remove();
         console.log(oldFav + " removed from favorites");
         console.log(favorites);
@@ -43,6 +69,19 @@ $(document).ready(function(){
     $('.addFav').click(function() {
         count += 1;
         var newItem = $('#addFav').val();
+        data = {};
+        data.favorite = newItem;
+
+        $.ajax({
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json',
+            url: 'http://localhost:3000/settings/add',
+            success: function(newItem) {
+                console.log('Success: ' + newItem + ' added to favorites');
+            } 
+        });
+
         console.log(newItem);
         if(newItem != "") {
             favorites.push(newItem);
