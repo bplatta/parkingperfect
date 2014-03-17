@@ -99,7 +99,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585871', end
 	margin: 10px 0 2em;
 }
 #timepicker2, #timepicker1 {
-	width: 4.2em;
+	width: 4em;
 	margin: 0;
 }
 #searchb {
@@ -421,7 +421,20 @@ button.spotset {
 /* smartphones */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	#map-view {width: 360px; height: 500px;}
-
+	.sel {height: 2.5em; margin-bottom: 0;}
+	.ftitle {width: 13em;}
+	#searchb {width: 40%; margin: 1em auto;}
+	#key li {line-height: 1.4em;}
+	#key img {width: 1em;}
+	#search {margin: 0}
+	#keytitle { width: 13em;}
+	.list-group {width: 34em;}
+	#current {width: %50;}
+	#permits {margin-top: 1.2em;}
+	#selectP {margin: 0;}
+	#favorites {margin-top: 1.2em;}
+	#favorites ul li {font-size: 15px; padding: 0.2em;}
+	#favorites input {height: 1em;}
 
 
 }
