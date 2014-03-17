@@ -290,7 +290,7 @@ li.panel-body:nth-child(odd) {
 }
 
 button.spotset {
-	float: right;
+	float: left;
 }
 
 #favorites li:nth-child(odd) {
@@ -430,7 +430,7 @@ button.spotset {
 	#timepicker1, #timepicker2 {width: 3.8em;}
 	#keytitle { width: 13em;}
 	.list-group {width: 30em;}
-	#current {width: %30;}
+	#current {width: %40;}
 	#permits {margin-top: 1.2em;}
 	#selectP {margin: 0;}
 	#favorites {margin-top: 1.2em;}
@@ -438,6 +438,7 @@ button.spotset {
 	#favorites input {height: 1em;}
 	#outputInfo {margin: 50% auto;}
 	.filter img {margin-right: 9px;}
+	#footer {overflow: hidden;}
 
 }
 
