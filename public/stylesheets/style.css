@@ -217,7 +217,7 @@ li.panel-body:nth-child(odd) {
 /* user settings */
 
 #current {
-	margin-left: 4%;
+	margin: 3%;
 }
 
 #settings-page h3 {
@@ -423,10 +423,11 @@ li.panel-body:nth-child(odd) {
 	#key li {line-height: 1.4em;}
 	#key img {width: 1em;}
 	#search {margin: 0}
+	#timefilter {width: 100%;}
 	#timepicker1, #timepicker2 {width: 3.8em;}
 	#keytitle { width: 13em;}
 	.list-group {width: 30em;}
-	#current {width:13em; margin: 4%;}
+	#current {width:12em; margin-top: 3%;}
 	#permits {margin-top: 1.2em;}
 	#selectP {margin: 0;}
 	#favorites {margin-top: 1.2em;}
@@ -434,7 +435,8 @@ li.panel-body:nth-child(odd) {
 	#favorites input {height: 1em;}
 	#outputInfo {margin: 50% auto;}
 	.filter img {margin-right: 9px;}
-	#footer {overflow: hidden;}
+	#footer {overflow: hidden; height: 3.5em;}
+	.spotset {margin-left: 2px;}
 
 }
 
