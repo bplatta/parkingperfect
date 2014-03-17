@@ -432,6 +432,10 @@ li.panel-body:nth-child(odd) {
 
 /* RESPONSIVE LAYOUT DESIGN */
 
+/* desktop */
+
+
+
 /* smartphones */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 	#map-view {width: 360px; height: 500px;}
@@ -471,11 +475,55 @@ li.panel-body:nth-child(odd) {
 /* iphone4 portrait */
 @media (device-height : 480px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
 	#map-view {width: 320px; height: 475px;}
+	.sel {height: 2.2em; margin-bottom: 0;}
+	.ftitle {width: 12em;}
+	#searchb {width: 40%; margin: 1em auto;}
+	#key li {line-height: 1.3em;}
+	#key img {width: 1em;}
+	#search {margin: 0}
+	#timefilter {width: 100%;}
+	#timepicker1, #timepicker2 {width: 3.8em;}
+	#keytitle { width: 12em;}
+	.list-group {height: 34em}
+	#current {width:11em; margin-top: 3%;}
+	#permits {margin-top: 1.2em;}
+	#selectP {margin: 0;}
+	#favorites {margin-top: 1.2em;}
+	#favorites ul li {font-size: 15px; padding: 0.2em;}
+	#favorites input {height: 1em;}
+	#outputInfo {margin: 50% auto;}
+	.filter img {margin-right: 9px;}
+	#footer {overflow: hidden; height: 3.5em;}
+	.spotset {margin-left: 2px;}
+	#footer li {padding-top: 0.8em;}
+
 }
 
 /* iphone5 portrait */
 @media (device-height : 568px) and (device-width : 320px) and (-webkit-min-device-pixel-ratio: 2) {
 	#map-view {width: 320px; height: 560px;}
+	.sel {height: 2.5em; margin-bottom: 0;}
+	.ftitle {width: 13em;}
+	#searchb {width: 40%; margin: 1em auto;}
+	#key li {line-height: 1.4em;}
+	#key img {width: 1em;}
+	#search {margin: 0}
+	#timefilter {width: 100%;}
+	#timepicker1, #timepicker2 {width: 3.8em;}
+	#keytitle { width: 13em;}
+	.list-group {height: 34em}
+	#current {width:11em; margin-top: 3%;}
+	#permits {margin-top: 1.2em;}
+	#selectP {margin: 0;}
+	#favorites {margin-top: 1.2em;}
+	#favorites ul li {font-size: 15px; padding: 0.2em;}
+	#favorites input {height: 1em;}
+	#outputInfo {margin: 50% auto;}
+	.filter img {margin-right: 9px;}
+	#footer {overflow: hidden; height: 3.5em;}
+	.spotset {margin-left: 2px;}
+	#footer li {padding-top: 0.8em;}
+
 }
 
 /* ipads portrait and landscape */
