@@ -42,13 +42,13 @@ $(document).ready(function(){
         ncurrent = $('#current').val();
         rmodal.hide();
         if(ncurrent!=""){
-            displayMessage.html(current + " added as current spot");
+            displayMessage.html(ncurrent + " added as current spot");
             display.css('background-color', '#B2D3F4');
             display.show();
             modal.show();
 
             data = {};
-            data.current = current;
+            data.current = ncurrent;
 
             $.ajax({
             type: 'POST',
@@ -56,7 +56,7 @@ $(document).ready(function(){
             contentType: 'application/json',
             url: 'http://parkingperfect.herokuapp.com/settings/updateSpot',
             success: function(newItem) {
-                console.log('Success: ' + current + ' set to current');
+                console.log('Success: ' + ncurrent + ' set to current');
             } 
         });
         }
