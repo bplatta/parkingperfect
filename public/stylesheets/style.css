@@ -59,13 +59,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585871', end
 }
 
 .filters ul {
-	float: left;
 	margin: 2em 0 0 0;
 }
 .ftitle {
 	border-bottom: 1px solid white;
 	margin-bottom: 1em;
-	width: 17em;
+	width: 15em;
 }
 
 .ftitle p {
@@ -96,7 +95,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585871', end
 	margin: 10px 0 2em;
 }
 #timepicker2, #timepicker1 {
-	width: 4em;
+	width: 4.2em;
 	margin: 0;
 }
 #searchb {
@@ -120,7 +119,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585871', end
 #keytitle {
 	padding: 0 !important;
 	border-bottom: 1px solid white;
-	width: 17em;
+	width: 15em;
 	line-height: 20px !important;
 }
 
@@ -200,10 +199,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 .list-group {
-	left: 20px;
-	position: absolute;
-	width: 89%;
+	visibility: hidden;
+	margin: 0 0 0 30px;
+	width: 97%;
 	overflow: scroll;
+	height: 40em;
+}
+
+#fakelist {
+	width: 97%;
+}
+
+#fakelist li {
+	height: 5em;
 }
 
 /* user settings */
@@ -291,7 +299,7 @@ button.spotset {
 	background-color: #FAFAFA;
 }
 
-#hiddendata {
+.hiddendata {
 	visibility: hidden;
 }
 

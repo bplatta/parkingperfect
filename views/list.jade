@@ -4,6 +4,8 @@ block search
 	include includes/search
 block content
 	div#list-view.container-fluid
+		ul#fakelist
+			li.panel-body
 		ul.list-group
 			each object in data
 				li.panel-body
@@ -11,6 +13,8 @@ block content
 						each val, index in object
 							li
 								span= index + ": " + val
+	div.hiddendata
+		span #{view}
 		
 block footer
 	include includes/footer-nav

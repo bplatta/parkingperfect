@@ -43,6 +43,7 @@ module.exports = {"results":[{
 	"user": { 
 		"name": "Abe Lincoln",
 		"current": "Log Cabin",
+		"reminder": null,
 		"favorites": ["One place", "another Place"]
 	}
 }

@@ -2,7 +2,7 @@ $(document).ready(function(){
     var current="";
     var count = 0;
     var display = $('#outputInfo');
-    var favorites = $('#hiddendata span').html().split(',');
+    var favorites = $('.hiddendata span').html().split(',');
 
     $('.spotset').click(function(){
         current = $('#current').val();

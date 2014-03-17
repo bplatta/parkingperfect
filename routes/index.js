@@ -9,7 +9,7 @@ exports.list = function(req, res){
 };
 
 exports.settings = function(req, res){
-	res.render('settings',{ view: "settings", title: 'Parking Perfect: Settings', favorites: fakeUser.favorites });
+	res.render('settings',{ view: "settings", title: 'Parking Perfect: Settings', user: fakeUser, favorites: fakeUser.favorites});
 };
 
 exports.map = function(req, res){

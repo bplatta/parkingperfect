@@ -5,7 +5,7 @@ block content
 		div#current-spot
 			div#setSpot
 				span Current Spot: 
-					input(type="text", name="current" id="current")
+					input(type="text", name="current" id="current", placeholder="")
 					button(class="spotset btn", type="submit",name="setSpot") set
 			div#outputInfo
 			div#help-buttons.btn-group
@@ -30,7 +30,7 @@ block content
 					input(id="addFav",type="text",name="newfav")
 					img(src="images/add.png" class="addFav")
 			button(class="btn", id="save", type="button", name="save") Save
-		div#hiddendata
+		div.hiddendata
 			span #{favorites}
 
 
