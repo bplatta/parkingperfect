@@ -14,7 +14,7 @@ body {
 #search-box {
 	z-index: 10;
 	width: 78%;
-	height: 93%; 
+	height: 100%; 
 	left: -64%;
 	position: fixed;
 	background: rgb(88,88,113); /* Old browsers */
@@ -217,7 +217,7 @@ li.panel-body:nth-child(odd) {
 /* user settings */
 
 #current {
-	margin-left: 3%;
+	margin-left: 4%;
 }
 
 #settings-page h3 {
@@ -287,10 +287,6 @@ li.panel-body:nth-child(odd) {
 	width: 100%;
 	display: block;
 	margin-bottom: 1.5em;
-}
-
-button.spotset {
-	float: left;
 }
 
 #favorites li:nth-child(odd) {
@@ -430,7 +426,7 @@ button.spotset {
 	#timepicker1, #timepicker2 {width: 3.8em;}
 	#keytitle { width: 13em;}
 	.list-group {width: 30em;}
-	#current {width: %40;}
+	#current {width:13em;}
 	#permits {margin-top: 1.2em;}
 	#selectP {margin: 0;}
 	#favorites {margin-top: 1.2em;}

@@ -134,4 +134,13 @@ $(document).ready(function(){
             });
         }
     });
+
+    window.addEventListener("resize", function() {
+        if (window.innerHeight < initialScreenSize) {
+            $('#footer').hide();
+        } else {
+            $('#footer').show();
+        }
+    });
+    
 });
