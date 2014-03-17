@@ -428,8 +428,8 @@ button.spotset {
 	#key img {width: 1em;}
 	#search {margin: 0}
 	#keytitle { width: 13em;}
-	.list-group {width: 34em;}
-	#current {width: %50;}
+	.list-group {width: 30em;}
+	#current {width: %30;}
 	#permits {margin-top: 1.2em;}
 	#selectP {margin: 0;}
 	#favorites {margin-top: 1.2em;}
