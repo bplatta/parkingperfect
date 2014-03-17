@@ -18,7 +18,7 @@ $(document).ready(function(){
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json',
-            url: 'http://localhost:3000/settings/updateSpot',
+            url: 'http://parkingperfect.herokuapp.com/settings/updateSpot',
             success: function(newItem) {
                 console.log('Success: ' + current + ' set to current');
             } 
@@ -55,7 +55,7 @@ $(document).ready(function(){
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json',
-            url: 'http://localhost:3000/settings/del',
+            url: 'http://parkingperfect.herokuapp.com/settings/del',
             success: function(newItem) {
                 console.log('Success: ' + newItem + ' deleted from favorites');
             } 
@@ -76,7 +76,7 @@ $(document).ready(function(){
             type: 'POST',
             data: JSON.stringify(data),
             contentType: 'application/json',
-            url: 'http://localhost:3000/settings/add',
+            url: 'http://parkingperfect.herokuapp.com/settings/add',
             success: function(newItem) {
                 console.log('Success: ' + newItem + ' added to favorites');
             } 
